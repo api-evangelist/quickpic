@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: probed
+source: live HTTP probes of quickpic.co.za well-known paths
+host: quickpic.co.za
+probes:
+- path: /.well-known/security.txt
+  status: 404
+  file: null
+- path: /.well-known/ai-plugin.json
+  status: 404
+  file: null
+- path: /.well-known/openid-configuration
+  status: 200
+  file: null
+  note: returns SPA shell (HTML), not a JSON OpenID configuration document
+- path: /.well-known/api-catalog
+  status: 200
+  file: null
+  note: returns SPA shell (HTML), not an API catalog document
+- path: /.well-known/oauth-authorization-server
+  status: 404
+  file: null
+result: no valid well-known documents published
